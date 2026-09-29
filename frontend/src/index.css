@@ -1,0 +1,15 @@
+/* FILE: index.css
+   Very small global reset. The default Vite styles are removed
+   because they centre everything and would break our table layout. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background: #f3f5f9; */
+ background: oklab(33.501% 0.1186 0.06547 / 0.609);
+  color: #222;
+}

@@ -1,0 +1,294 @@
+/* FILE: App.css
+   All the styling for the page, form, messages and table. */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+h1 {
+  text-align: center;
+  color: #1f3a68;
+  margin-bottom: 24px;
+}
+
+h2 {
+  color: #1f3a68;
+  margin-top: 32px;
+}
+
+/* ---------- Messages ---------- */
+.message {
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.message.success {
+  background: #e3f6e8;
+  color: #1b6b32;
+  border: 1px solid #a5dbb4;
+}
+
+.message.error {
+  background: #fde8e8;
+  color: #a12626;
+  border: 1px solid #f3b5b5;
+}
+
+/* ---------- Form ---------- */
+.form {
+  /* background: #ffffff; */
+  background: #08e8b0;
+  padding: 20px 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form h2 {
+  margin-top: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field.full-width {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  padding: 9px 10px;
+  border: 1px solid #c5cbd6;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3b6fd4;
+  box-shadow: 0 0 0 2px rgba(59, 111, 212, 0.2);
+}
+
+.field-error {
+  color: #c0392b;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.form-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #2f5fc4;
+}
+
+.btn-primary:hover:not(:disabled) {
+  /* background: #244ba0; */
+  background: #cf2608e3;
+  transform: scale(1.1);
+  
+}
+
+
+
+.btn-secondary {
+  background: #7b8494;
+}
+
+.btn-small {
+  padding: 6px 10px;
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+.btn-edit {
+  background: #e29a1c;
+}
+
+.btn-delete {
+  background: #d64545;
+}
+
+/* ---------- Table ---------- */
+.table-wrapper {
+  overflow-x: auto;
+  /* background: #ffffff; */
+  background: #08e8b0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e6e9ef;
+  white-space: nowrap;
+}
+
+th {
+  background: #eef2fa;
+  color: #1f3a68;
+}
+
+tbody tr:hover {
+  background: #f7f9fd;
+}
+
+.actions {
+  white-space: nowrap;
+}
+
+.info-text {
+  color: #666;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ---------- View button and selected row ---------- */
+.btn-view {
+  background: #2f8f5b;
+}
+
+.selected-row {
+  background: #eaf1ff;
+}
+
+/* ---------- Student details card ---------- */
+.student-card {
+  position: relative; /* lets the close button sit in the top-right corner of the card */
+  background: #ffffff;
+  border-radius: 20px; /* the rounded corners */
+  padding: 24px 28px;
+  margin-top: 28px;
+  box-shadow: 0 6px 20px rgba(31, 58, 104, 0.15);
+  border-top: 6px solid #2f5fc4;
+  overflow: hidden; /* keeps the top border inside the rounded corners */
+}
+
+.card-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: #eef2fa;
+  color: #1f3a68;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.card-close:hover {
+  background: #d9e2f5;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.card-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #2f5fc4;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-name {
+  margin: 0;
+  font-size: 22px;
+  color: #1f3a68;
+}
+
+.card-sub {
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.card-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.card-item {
+  background: #f6f8fc;
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-item-full {
+  grid-column: 1 / -1;
+}
+
+.card-label {
+  font-size: 12px;
+  color: #7b8494;
+  margin-bottom: 2px;
+}
+
+.card-value {
+  font-size: 15px;
+  font-weight: bold;
+  color: #222;
+  word-break: break-word;
+}
